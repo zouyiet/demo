@@ -29,8 +29,8 @@ var (
 )
 
 const username = "root"
-const password = "daxueba"
-const password_salt = "jdsec"
+const password = "sss"
+const password_salt = "sss"
 
 type Scan_ssh struct {
 	ip             string
